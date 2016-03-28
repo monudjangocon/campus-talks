@@ -1,0 +1,49 @@
+.msg_box{
+	display:none;
+	width:200px;
+	position:fixed;
+	bottom:0px;
+	
+}
+
+.msg_head{
+	width:200px;
+	height:40px;
+	background:#8b9dc3;
+	cursor:pointer;
+	padding:10px;
+
+}
+
+.msg_body{
+	width:200px;
+	height:180px;
+	background:#f7f7f7;
+	padding:10px;
+
+}
+
+.msg_footer{  
+    width:200px;
+    height:60px;
+    border:transparent;
+    border-top:1px solid orange;
+}
+
+textarea{
+	resize:none;
+
+}
+
+
+.close{
+	float:right;
+	background:white;
+	cursor:pointer;
+}
+
+
+.msg_input{
+	width:100%;
+
+}

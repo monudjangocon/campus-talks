@@ -1,0 +1,35 @@
+
+
+.user{
+	position:relative;
+	padding:15px 20px;
+	cursor:pointer;
+	
+}
+
+.user:before{
+	position:absolute;
+	width:10px;
+	height:10px;
+	content:"";
+	background:#2ecc71;
+	left:4px;
+	top:19px;
+	border-radius:5px;
+	
+}
+
+.user:hover{
+	background:#ecf0f1;
+}
+
+
+#single_user{
+	color:orange;
+
+}
+
+#single_user:hover{
+	background:#eee;
+	cursor:pointer;
+}

@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block head %}
+  <link rel="stylesheet" href="{% static 'css/chat.css' %}">
+  <link rel="stylesheet" href="{% static 'css/member.css' %}">
+  <link rel="stylesheet" href="{% static 'css/message.css' %}">
+  
+{% endblock head %}
+
+{% block content %}
+  <div class="container">
+   	  <div class="member">
+   	    <div class="row">
+   		    <div class="col-md-9 col-offset-md-1">
+                 {% for item in user_pr %}
+                      <div class="member2">
+                           <a href="{{item.users.get_absolute_url}}"><img src="{{item.image.url}}" width="130" height="100"/></a>
+                           <p class="member_div">{{item.users.user.username}}</p>
+
+      			          </div>
+                 {% endfor %} 
+          </div>       
+
+                      <div class="col-md-1"> 
+                        
+                         <div id="sidebar">
+                                  {% for item in user_pr %}
+                                      <div class="single_user"> 
+                                        <img src="{{item.image.url}}" alt="img" width="30" height="30">
+                                        <strong>&nbsp;&nbsp;{{item.users.user.username}}</strong>
+                                      </div>
+                                      <br>
+                                      
+                                       <div class="msg_box" style="right:125px;">  
+                                         <div class="msg_head">
+                                          <a href="{{item.users.get_absolute_url}}"><span id="user">{{item.users.user_id}}</span></a>
+                                            <div class="close">X</div>
+                                         </div>
+                                         <div class="msg_cover">
+                                           <div class="msg_body">
+                                              <p style="margin:0px;"><img  src="{{item.image.url}}" width="20" height="20"/>{{item.users.user.username}}</p>
+                                           </div>
+                                             <div class="msg_footer">
+                                               <textarea class="msg_input" placeholder="Type message here..."></textarea>
+                                              </div>
+                                          </div>
+                                        </div>
+                                        {% endfor %}
+     
+                             </div>
+                     </div>
+
+   	      </div>
+
+      
+         
+        </div>
+      </div>
+
+{% endblock %}

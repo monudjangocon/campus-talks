@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block head %}
+  <link rel="stylesheet" href="{% static 'css/member.css' %}">
+{% endblock head %}
+
+{% block content %}
+   <div class="container">
+      
+   	     <div class="member">
+   	  
+   		      {% for item in member_detail %}
+             <div class="row">
+               <div class="col-md-4">
+             <div class="profile_pic">
+                <img src="{{item.image.url}}" alt="img" width="200" height="200">
+             </div>
+               </div>
+             <div class="col-md-8">  
+            
+                <div class="user_info">
+                 <strong> Username </storng>: {{item.users.user.username}}
+   			 
+   		       </div>
+           </div>  
+           </div>
+       {% endfor %}  
+   </div>
+</div>
+
+
+{% endblock %}

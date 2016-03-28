@@ -1,0 +1,42 @@
+.member{
+	top:90px;
+	position:absolute;
+}
+
+.member2{
+	width:150px;
+	height:130px;
+	float:left;
+	margin:15px;
+	border:1px solid orange;
+}
+
+
+#sidebar{
+	width:190px;
+	height:auto;
+	margin-right:0;
+
+
+}
+
+.single_user{
+	cursor:pointer;
+}
+
+
+.profile_pic{
+	width:200px;
+	height:200px;
+	border:1px solid grey;
+
+}
+
+.member_div{
+	color:green;
+	margin-bottom:4px;
+	text-align:center;
+}
+
+.user_info{
+	margin-right:0;}
